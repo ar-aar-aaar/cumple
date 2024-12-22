@@ -1,0 +1,493 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #f6e58d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body * {
+    position: absolute;
+}
+
+body *:before,
+body *:after {
+    content: "";
+    position: absolute;
+}
+
+.dino {
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12em;
+    height: 14em;
+    -webkit-animation: dino_move 0.3s ease-in forwards;
+    animation: dino_move 0.3s ease-in forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.dino .eyes {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.3em;
+    height: 3em;
+}
+
+.dino .eyes .eye {
+    box-sizing: border-box;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    border-radius: 100%;
+    background: #00a185;
+}
+
+.dino .eyes .eye:before {
+    top: 0.6em;
+    left: 50%;
+    width: 0.4em;
+    height: 1.8em;
+    transform: translateX(-50%);
+    background: #34495f;
+    border-radius: 4px;
+}
+
+.dino .eyes .eye:nth-child(1) {
+    left: 0;
+}
+
+.dino .eyes .eye:nth-child(2) {
+    right: 0;
+}
+
+.dino .mouth {
+    top: 1.3em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4.8em;
+    height: 4.8em;
+    background: #00a185;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.dino .mouth:before {
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 100%;
+    background: #40b39d;
+    border-radius: 100%;
+}
+
+.dino .mouth .nose {
+    top: 0.8em;
+    left: 50%;
+    width: 60%;
+    height: 1em;
+    transform: translateX(-50%);
+}
+
+.dino .mouth .nose:before,
+.dino .mouth .nose:after {
+    top: 0;
+    width: 1em;
+    height: 1em;
+    background: #00a185;
+    border-radius: 100%;
+}
+
+.dino .mouth .nose:before {
+    left: 0;
+}
+
+.dino .mouth .nose:after {
+    right: 0;
+}
+
+.dino .mouth .nose .nostril {
+    top: 0.15em;
+    width: 0.75em;
+    height: 1em;
+    background: #40b39d;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.dino .mouth .nose .nostril:nth-child(1) {
+    left: 0.3em;
+    transform: rotate(45deg);
+}
+
+.dino .mouth .nose .nostril:nth-child(2) {
+    right: 0.3em;
+    transform: rotate(-45deg);
+}
+
+.dino .mouth .teeth {
+    width: 50%;
+    height: 3.1em;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.dino .mouth .teeth:before,
+.dino .mouth .teeth:after {
+    top: 0;
+    width: 53%;
+    height: 100%;
+    background: #f8ebad;
+    border-radius: 100%;
+}
+
+.dino .mouth .teeth:before {
+    left: 0;
+}
+
+.dino .mouth .teeth:after {
+    right: 0;
+}
+
+.dino .body {
+    top: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8em;
+    height: 8.5em;
+    background: #40b39d;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.dino .body:before {
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 110%;
+    background: #7bd19c;
+    border-radius: 100%;
+}
+
+.dino .arm {
+    top: 5.5em;
+    width: 4em;
+    height: 2em;
+}
+
+.dino .arm:before {
+    top: 0;
+    width: 1.8em;
+    height: 2em;
+    border-radius: 100%;
+    background: #00a185;
+}
+
+.dino .arm:after {
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+}
+
+.dino .arm:nth-child(1) {
+    left: 0;
+    transform: rotate(10deg);
+}
+
+.dino .arm:nth-child(1):before {
+    left: 0;
+}
+
+.dino .arm:nth-child(1):after {
+    left: 1em;
+    border-left: 6em solid #00a185;
+}
+
+.dino .arm:nth-child(2) {
+    right: 0;
+    transform: rotate(-10deg);
+}
+
+.dino .arm:nth-child(2):before {
+    right: 0;
+}
+
+.dino .arm:nth-child(2):after {
+    right: 1em;
+    border-right: 6em solid #00a185;
+}
+
+.egg_cup {
+    width: 280px;
+    height: 360px;
+}
+
+.egg_cup:after {
+    bottom: 0;
+    right: 5%;
+    width: 80%;
+    height: 50%;
+    border-radius: 100%;
+    transform: rotate(-24deg);
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.egg_cup .egg_top,
+.egg_cup .egg_bottom {
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.egg_cup .egg_top:after,
+.egg_cup .egg_bottom:after {
+    left: 0;
+    width: 280px;
+    height: 360px;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    z-index: 2;
+}
+
+.egg_cup .egg_top .egg_wrap,
+.egg_cup .egg_bottom .egg_wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.egg_cup .egg_top .dot,
+.egg_cup .egg_bottom .dot {
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.egg_cup .egg_shell {
+    width: 280px;
+    height: 360px;
+    background: #f9f9e3;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+}
+
+.egg_cup .egg_top {
+    top: 0;
+    height: 40%;
+    transform-origin: bottom left;
+    -webkit-animation: egg_top 0.3s ease-in forwards;
+    animation: egg_top 0.3s ease-in forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.egg_cup .egg_top:after {
+    top: 0;
+}
+
+.egg_cup .egg_top .egg_shell {
+    top: 0;
+}
+
+.egg_cup .egg_top .egg_crack {
+    bottom: -1em;
+}
+
+.egg_cup .egg_top .egg_crack i {
+    border-top: 0.8em solid #f9f9e3;
+    filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.1));
+}
+
+.egg_cup .egg_top .dots .dot:nth-child(1) {
+    top: 3em;
+    left: 5em;
+    height: 2em;
+    transform: rotate(45deg);
+    opacity: 0.3;
+}
+
+.egg_cup .egg_top .dots .dot:nth-child(2) {
+    top: 7em;
+    left: 8em;
+    opacity: 0.5;
+}
+
+.egg_cup .egg_top .dots .dot:nth-child(3) {
+    top: 4.5em;
+    left: 13em;
+}
+
+.egg_cup .egg_bottom {
+    bottom: 0;
+    height: 60%;
+}
+
+.egg_cup .egg_bottom:after {
+    bottom: 0;
+}
+
+.egg_cup .egg_bottom .egg_shell {
+    bottom: 0;
+}
+
+.egg_cup .egg_bottom .egg_crack {
+    top: -0.6em;
+}
+
+.egg_cup .egg_bottom .egg_crack:before,
+.egg_cup .egg_bottom .egg_crack:after {
+    top: -0.6em;
+    width: 1em;
+    height: 1.5em;
+    background: #f6e58d;
+    z-index: 10;
+}
+
+.egg_cup .egg_bottom .egg_crack:before {
+    left: -0.8em;
+    transform: rotate(14deg);
+}
+
+.egg_cup .egg_bottom .egg_crack:after {
+    right: -0.85em;
+    transform: rotate(-14deg);
+}
+
+.egg_cup .egg_bottom .egg_crack i {
+    border-bottom: 0.8em solid #f9f9e3;
+    filter: drop-shadow(0 -2px 0 rgba(0, 0, 0, 0.1));
+}
+
+.egg_cup .egg_bottom .dots .dot:nth-child(1) {
+    top: 3em;
+    left: 2em;
+    height: 1.5em;
+}
+
+.egg_cup .egg_bottom .dots .dot:nth-child(2) {
+    top: 10em;
+    left: 6em;
+    opacity: 0.8;
+}
+
+.egg_cup .egg_bottom .dots .dot:nth-child(3) {
+    top: 4em;
+    left: 14em;
+}
+
+.egg_cup .egg_bottom .dots .dot:nth-child(4) {
+    top: 7.5em;
+    left: 12.5em;
+    width: 2.5em;
+    height: 4em;
+    transform: rotate(45deg);
+    opacity: 0.5;
+}
+
+.egg_cup .egg_crack {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1em;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.egg_cup .egg_crack i {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin-left: -2px;
+    border-left: 0.81em solid transparent;
+    border-right: 0.81em solid transparent;
+}
+
+.egg_cup .egg_crack .egg_crack_cover {
+    right: 0;
+    top: -2px;
+    width: 272px;
+    height: 1em;
+    background: #f9f9e3;
+    z-index: 1;
+    -webkit-animation: egg_crack 1s linear forwards;
+    animation: egg_crack 1s linear forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes egg_top {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-200%) translateX(-50%) rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes egg_top {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-200%) translateX(-50%) rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes dino_move {
+    0% {
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+}
+
+@keyframes dino_move {
+    0% {
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+}
+
+@-webkit-keyframes egg_crack {
+    0% {
+        width: 272px;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes egg_crack {
+    0% {
+        width: 272px;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
