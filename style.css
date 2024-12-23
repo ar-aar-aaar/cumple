@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    background: #f6e58d;
+    background: #ff6464;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +22,18 @@ body *:after {
     position: absolute;
 }
 
+.birthday{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+
+}
+.birthday p,
+.birthday a{
+    position: initial;
+}
 .dino {
     top: 2em;
     left: 50%;
@@ -353,7 +365,7 @@ body *:after {
     top: -0.6em;
     width: 1em;
     height: 1.5em;
-    background: #f6e58d;
+    background: #ff6464;
     z-index: 10;
 }
 
