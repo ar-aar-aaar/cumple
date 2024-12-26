@@ -21,18 +21,100 @@ body *:after {
     content: "";
     position: absolute;
 }
-
+audio{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+@font-face {
+    font-family: Dino;
+    src: url(HappyDino-gw24Y.ttf);
+}
 .birthday{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 5;
+    font-family: 'Dino', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
 }
 .birthday p,
 .birthday a{
     position: initial;
+    text-align: center;
+}
+.letter {
+    display: inline-block;
+    font-weight: bold;
+    position: initial;
+    font-size: 28px;
+}
+
+.r { color: red; }
+.o { color: orange; }
+.y { color: yellow; }
+.g { color: green; }
+.b { color: blue; }
+.i { color: indigo; }
+.v { color: violet; }
+
+.link{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link a{
+    padding: 15px 30px;
+    font-size: 20px;
+    background: rgba(0,0,0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-family: 'Dino', sans-serif;
+    text-decoration: none;
+
+}
+
+
+.link a {
+  animation: glow 2s infinite;
+}
+
+
+.link a:hover,
+.choice-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
 }
 .dino {
     top: 2em;

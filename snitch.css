@@ -20,7 +20,6 @@ html {
 }
 
 .text{
-    background-color: #080e2c;
     padding: 0 20px;
     color: #fff;
     display: flex;
@@ -28,6 +27,9 @@ html {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
 }
 h1{
     margin-bottom: 30px;
@@ -36,6 +38,13 @@ p {
     color: #efefef;
     margin-bottom: 15px;
     text-align: justify;
+}
+audio{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 
 
@@ -56,14 +65,6 @@ p {
     display: none;
   }
 
-  
-  body {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
   .snitch {
     position: relative;
     text-align: center;
@@ -327,7 +328,6 @@ p {
     margin: auto;
     aspect-ratio: 1/1;
     overflow: visible;
-    top: 40px;
 }
 
 @supports not (aspect-ratio: 1/1) {
@@ -915,9 +915,12 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    opacity: .7;
+    top: 0;
 }
 
 .content .ciel {
@@ -1051,75 +1054,10 @@ p {
     width: 100%;
     height: 15%;
     max-height: 30vw;
-    top: 190px;
+    top: 242px;
     position: absolute;
     clip-path: polygon(38% 13%, 51% 42%, 68% 10%, 86% 43%, 100% 7%, 100% 100%, 0 100%, 0 0, 11% 18%, 20% 48%);
     background: linear-gradient(to bottom, #643209, #080e2c);
 }
 
-@media not all and (min-resolution: 0.001dpcm) {
-    .hogwarts {
-        display: none;
-    }
-
-    .content .ciel {
-        background: linear-gradient(to bottom, #3a1479, #0e0f45);
-    }
-
-    .content .ciel::after {
-        transform: translateY(25%);
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 130%;
-        background-image: radial-gradient(circle, #f5c9e9ff, #f5c9e9ee 25%, #bd93bcaa 25%, #bd93bcaa 38%, #85629277 45%, #4d356a55, #0e0f4511);
-    }
-
-    .content .terre {
-        width: 70%;
-        height: 10vmw;
-        min-height: 200px;
-        bottom: 51.8%;
-        clip-path: unset;
-        background: transparent;
-        background: #00000000;
-        min-width: 500px;
-    }
-
-    .content .terre::after {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: black;
-        clip-path: polygon(82% 39%, 88% 57%, 85% 79%, 96% 89%, 100% 100%, 0 100%, 10% 75%, 23% 70%, 31% 57%, 43% 49%);
-    }
-
-    .content .terre .azcaban {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        left: 45%;
-        width: 15%;
-        height: 160%;
-        background: black;
-        transform: skewY(-13deg) translateY(-20%);
-        max-width: 100px;
-    }
-
-    .content .terre .azcaban::after {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        right: -45%;
-        width: 80%;
-        height: 100%;
-        background: black;
-        transform: skewY(23deg);
-    }
-}
 
