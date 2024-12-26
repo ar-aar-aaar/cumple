@@ -30,7 +30,7 @@ audio{
 }
 @font-face {
     font-family: Dino;
-    src: url(https://github.com/ar-aar-aaar/cumple/blob/main/HappyDino-gw24Y.ttf);
+    src: url(HappyDino-gw24Y.ttf);
 }
 .birthday{
     display: flex;
